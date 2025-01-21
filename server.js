@@ -32,6 +32,9 @@ db.initialize(process.env.MONGODB_CONN_STRING)
   });
 
 // Routes
+app.get("/",(req, res) => {
+  res.json( {message: "API LISTENING"});
+});
 
 // POST /api/movies - Add a new movie
 app.post("/api/movies", async (req, res) => {
