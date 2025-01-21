@@ -45,7 +45,7 @@ module.exports = class MoviesDB {
     // We don't have a `Movie` object until initialize() is complete
     this.Movie = null;
   }
-
+connectionString = process.env.MONGODB_CONN_STRING;
   // Pass the connection string to `initialize()`
   initialize(connectionString) {
     return new Promise((resolve, reject) => {
